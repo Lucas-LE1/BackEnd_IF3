@@ -1,0 +1,19 @@
+{
+  "name": "back_end_app_if3",
+  "version": "1.0.0",
+  "description": "Versão back_end para app de informática 3 de ano letivo 2022",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lucas-LE1/BackEnd_IF3.git"
+  },
+  "author": "Lucas Eduardo Lima Da Silva",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lucas-LE1/BackEnd_IF3/issues"
+  },
+  "homepage": "https://github.com/Lucas-LE1/BackEnd_IF3#readme"
+}
