@@ -4,7 +4,7 @@ const { hashSync, genSaltSync } = require('bcrypt');
 const UserCreate = async (req, res) => {
 
     try {
-        const { registration, password, name } = req.body;
+        const { email, registration, password, name } = req.body;
 
         const salt = genSaltSync(10);
 
@@ -13,15 +13,17 @@ const UserCreate = async (req, res) => {
             defaults: { registration, name, password: hashSync(password, salt) }
         });
 
+
         created ?
             res.json({
                 title: "Sucesso",
-                subtitle: "Conta de usúario criada com sucesso."
+                subtitle: "Conta de usúario criada com sucesso.",
             })
             : user ?
                 res.json({
                     title: "Conta existente",
-                    subtitle: "Usúario já cadastrado no sistema."
+                    subtitle: "Usúario já cadastrado no sistema.",
+                    user:user.toJSON()
                 })
                 : null;
 

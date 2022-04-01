@@ -8,6 +8,11 @@ const User = sequelize.define('users',{
         autoIncrement:true,
         primaryKey:true
     },
+    email:{
+        type:DataTypes.STRING(75),
+        allowNull:false,
+        unique:true
+    },
     registration: {
         type:DataTypes.STRING(50),
         allowNull:false,
@@ -18,7 +23,7 @@ const User = sequelize.define('users',{
         allowNull:false,
     },
     password: {
-        type:DataTypes.STRING(65),
+        type:DataTypes.STRING(70),
         allowNull:false,
     },
     authenticate: {
